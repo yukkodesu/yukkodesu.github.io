@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Yukkoの部屋">
 <meta property="og:description" content="方便小伙伴们查阅，也方便初学者摆脱DEV-C++，干脆写一份自己的vscode配置指南好了">
 <meta property="og:locale">
-<meta property="og:image" content="https://villardhzq.github.io/2020/10/16/vscode/shokuhou.png">
+<meta property="og:image" content="https://villardhzq.github.io/vscode/shokuhou.png">
 <meta property="og:image" content="https://villardhzq.github.io/2020/10/16/vscode/00000246.jpg">
 <meta property="og:image" content="https://villardhzq.github.io/2020/10/16/vscode/winlibs.png">
 <meta property="og:image" content="https://villardhzq.github.io/2020/10/16/vscode/compiler.png">
@@ -36,11 +36,11 @@
 <meta property="og:image" content="https://villardhzq.github.io/2020/10/16/vscode/property.png">
 <meta property="og:image" content="https://villardhzq.github.io/2020/10/16/vscode/propertyllvm.png">
 <meta property="article:published_time" content="2020-10-16T09:39:25.000Z">
-<meta property="article:modified_time" content="2020-10-24T15:39:55.004Z">
+<meta property="article:modified_time" content="2020-11-09T02:10:11.632Z">
 <meta property="article:author" content="Yukko">
 <meta property="article:tag" content="TechGadget">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://villardhzq.github.io/2020/10/16/vscode/shokuhou.png">
+<meta name="twitter:image" content="https://villardhzq.github.io/vscode/shokuhou.png">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/han-css@3.3.0/dist/han.min.css">
 <link rel="stylesheet" href="https://fonts.loli.net/css?family=Fira+Mono|Roboto+Slab:400,600|Noto+Serif+SC:600&display=swap">
@@ -97,7 +97,7 @@
     
       <script src="https://cdn.jsdelivr.net/npm/dayjs@1.8.17/dayjs.min.js"></script>
 <script>
-  var post_updated = dayjs("2020-10-24T15:39:55.004Z");
+  var post_updated = dayjs("2020-11-09T02:10:11.632Z");
   var days_diff_now = dayjs().diff(post_updated, 'days');
 
   if (days_diff_now > 365) {
@@ -120,33 +120,33 @@
 <a id="more"></a>
 
 <h2 id="插播一下日常"><a href="#插播一下日常" class="headerlink" title="插播一下日常"></a>插播一下日常</h2><p>最近刚看完超炮3，超炮里我果然还是更喜欢食蜂操祈<br>毕竟心理掌握メンタルアウト 还是很令人羡慕的能力</p>
-<img src="shokuhou.png" srcset="/images/loading.jpg" data-srcset="shokuhou.png" width=800>
+<img src="/vscode/shokuhou.png" srcset="/images/loading.jpg" data-srcset="/vscode/shokuhou.png" class="center">
 
-<img src="00000246.jpg" srcset="/images/loading.jpg" data-srcset="00000246.jpg" width=800>
+<img src="00000246.jpg" srcset="/images/loading.jpg" data-srcset="00000246.jpg" width=800 align="middle">
 
 <p><strong>大赞超炮</strong></p>
 <h2 id="Compiler-and-PATH"><a href="#Compiler-and-PATH" class="headerlink" title="Compiler and PATH"></a>Compiler and PATH</h2><p>对于编译器，我个人倒是有一些偏好，还在要是嫌麻烦选用<code>GNU GCC</code>就好了<br>我个人倒是对<code>LLVM Clang</code>情有独钟。所以这里我个人会以<code>LLVM Clang</code>为编译器的配置为例。<br>当然这里也会讲<code>GNU GCC</code>如何配置<br>这里介绍一个下载编译好的现代的编译器的网站<del>(不像某DEV-C++还用远古的GCC4.9)</del></p>
 <p><a target="_blank" rel="noopener" href="http://winlibs.com/">WinLibs standalone build of GCC and MinGW-w64 for Windows</a></p>
-<p>打开来是这样的<br><img src="winlibs.png" srcset="/images/loading.jpg" data-srcset="winlibs.png" width=400><br>然后在标题下面点击Download，然后直接选择有LATEST标志的就可以了，这里选择without LLVM/Clang/LLD/LLDB里的7-Zip archive<br>下载完后会得到如下样式的文件<br><img src="compiler.png" srcset="/images/loading.jpg" data-srcset="compiler.png" width=600><br>解压到任意一个不带中文字符的目录，这里我直接解压到D盘了<br><img src="decompress.png" srcset="/images/loading.jpg" data-srcset="decompress.png" width=400><br>在环境变量里面添加你解压mingw64的地方，再在后面加上bin<br>类似于之类的<code>D:\mingw64\bin</code><br><img src="PATH.png" srcset="/images/loading.jpg" data-srcset="PATH.png" width=600></p>
+<p>打开来是这样的<br><img src="winlibs.png" srcset="/images/loading.jpg" data-srcset="winlibs.png" width=400 align="middle"><br>然后在标题下面点击Download，然后直接选择有LATEST标志的就可以了，这里选择without LLVM/Clang/LLD/LLDB里的7-Zip archive<br>下载完后会得到如下样式的文件<br><img src="compiler.png" srcset="/images/loading.jpg" data-srcset="compiler.png" width=600 align="middle"><br>解压到任意一个不带中文字符的目录，这里我直接解压到D盘了<br><img src="decompress.png" srcset="/images/loading.jpg" data-srcset="decompress.png" width=400 align="middle"><br>在环境变量里面添加你解压mingw64的地方，再在后面加上bin<br>类似于之类的<code>D:\mingw64\bin</code><br><img src="PATH.png" srcset="/images/loading.jpg" data-srcset="PATH.png" width=600 align="middle"></p>
 <p>然后下载LLVM，并安装，而且在安装界面里选择将LLVM加到PATH中<br><a target="_blank" rel="noopener" href="http://llvm.org/">LLVM Compiler</a></p>
 <p><strong>为什么不在刚才那里下载带有LLVM的版本呢？</strong><br>winlibs里的llvm和clang是以<code>x86_64-w64-mingw</code>为target的编译的，如果后来要在visual studio里编译项目时使用这里winlibs的llvm时会出bug<del>前几天编译x265爆了换了LLVM官网的binary才行</del>，所以我们先使用target为 <code>x86_64-pc-windows-msvc</code>的llvm，后面再在vscode中加入<code>--target=x86_64-w64-mingw</code>就行了</p>
 <p><strong>为什么要下载MinGW呢？</strong><br>MinGW里带有GNU GCC所带的include文件，这是LLVM所不具备的，LLVM一般都是用的GNU GCC的头文件或者是使用MSVC的头文件</p>
-<p>这样只要你在PowerShell中输入<code>clang++ --version</code>或者<code>gcc --version</code>有提示就说明你成功了<br><img src="cmd.png" srcset="/images/loading.jpg" data-srcset="cmd.png" width=400></p>
+<p>这样只要你在PowerShell中输入<code>clang++ --version</code>或者<code>gcc --version</code>有提示就说明你成功了<br><img src="cmd.png" srcset="/images/loading.jpg" data-srcset="cmd.png" width=400 align="middle"></p>
 <h2 id="Visual-Studio-Code配置"><a href="#Visual-Studio-Code配置" class="headerlink" title="Visual Studio Code配置"></a>Visual Studio Code配置</h2><p>接下来进入正文</p>
-<h3 id="安装中文和C-C-插件"><a href="#安装中文和C-C-插件" class="headerlink" title="安装中文和C/C++插件"></a>安装中文和C/C++插件</h3><img src="plugin.png" srcset="/images/loading.jpg" data-srcset="plugin.png" width=600>
+<h3 id="安装中文和C-C-插件"><a href="#安装中文和C-C-插件" class="headerlink" title="安装中文和C/C++插件"></a>安装中文和C/C++插件</h3><img src="plugin.png" srcset="/images/loading.jpg" data-srcset="plugin.png" width=600 align="middle">
 
-<h3 id="选择一个存你写的代码的文件夹"><a href="#选择一个存你写的代码的文件夹" class="headerlink" title="选择一个存你写的代码的文件夹"></a>选择一个存你写的代码的文件夹</h3><img src="vscode_folder.png" srcset="/images/loading.jpg" data-srcset="vscode_folder.png" height=400>
+<h3 id="选择一个存你写的代码的文件夹"><a href="#选择一个存你写的代码的文件夹" class="headerlink" title="选择一个存你写的代码的文件夹"></a>选择一个存你写的代码的文件夹</h3><img src="vscode_folder.png" srcset="/images/loading.jpg" data-srcset="vscode_folder.png" height=400 align="middle">
 
 <p>在左上角文件处选择打开文件夹</p>
 <p><strong>注意文件夹路径不要存在中文，要不然<code>gdb</code>调试会出问题</strong></p>
 <p>先写个HelloWorld</p>
-<img src="helloworld.png" srcset="/images/loading.jpg" data-srcset="helloworld.png" width=600>
+<img src="helloworld.png" srcset="/images/loading.jpg" data-srcset="helloworld.png" width=600 align="middle">
 
 <p>然后按住<code>Ctrl + F5</code>会出现如下界面</p>
-<img src="GDBoption.png" srcset="/images/loading.jpg" data-srcset="GDBoption.png" width=600>
+<img src="GDBoption.png" srcset="/images/loading.jpg" data-srcset="GDBoption.png" width=600 align="middle">
 
 <p><strong>这里选择 C++ (GDB/LLDB) 然后选择 g++生成</strong></p>
-<img src="g++option.png" srcset="/images/loading.jpg" data-srcset="g++option.png" width=600>
+<img src="g++option.png" srcset="/images/loading.jpg" data-srcset="g++option.png" width=600 align="middle">
 
 <p><strong>然后会在你的文件夹里的创建和一个<code>.vscode</code>文件夹里面有<code>launch.json和tasks.json</code>文件</strong></p>
 <p><strong>如果是只使用<code>GNU GCC</code>的大佬不需要更改如下的文件点击右边的目录可以跳到下面的<code>c_cpp_properties.json</code>的配置</strong></p>
@@ -159,12 +159,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;-static-libgcc&quot;,</span><br><span class="line">&quot;-Wall&quot;,</span><br><span class="line">&quot;--target&#x3D;x86_64-w64-mingw&quot;</span><br></pre></td></tr></table></figure>
 <p>主要是为了让clang以mingw为target，使用mingw的头文件，要不然他会去寻找MSVC的头文件，没装Visual Studio的情况会表现为找不到头文件，装了的情况会表现为编译出现一些未定义标识符的错误</p>
 <h3 id="c-cpp-properties-json的配置"><a href="#c-cpp-properties-json的配置" class="headerlink" title="c_cpp_properties.json的配置"></a><code>c_cpp_properties.json</code>的配置</h3><p>按<code>Ctrl + Shift + P</code>呼出命令框<br>输入config 出现下图，选择<code>C/C++ 编辑配置(UI)</code></p>
-<img src="config.png" srcset="/images/loading.jpg" data-srcset="config.png" width=600>
+<img src="config.png" srcset="/images/loading.jpg" data-srcset="config.png" width=600 align="middle">
 
 <p><strong>调整下图3个位置为以下选项(使用<code>GNU GCC</code>的同学)</strong></p>
-<img src="property.png" srcset="/images/loading.jpg" data-srcset="property.png" width=600>
+<img src="property.png" srcset="/images/loading.jpg" data-srcset="property.png" width=600 align="middle">
 
-<p><strong>调整下图4个位置为以下选项(使用<code>LLVM</code>的同学)</strong><br><img src="propertyllvm.png" srcset="/images/loading.jpg" data-srcset="propertyllvm.png" width=600></p>
+<p><strong>调整下图4个位置为以下选项(使用<code>LLVM</code>的同学)</strong><br><img src="propertyllvm.png" srcset="/images/loading.jpg" data-srcset="propertyllvm.png" width=600 align="middle"></p>
 <p><strong>llvm要参数里加入<code>--target=x86_64-w64-mingw</code></strong></p>
 <p>保存后重启以下vscode，这样应该就完全配置完了</p>
 <p>点开cpp文件后直接按<code>Ctrl + F5</code>运行，第一次运行会以调试模式运行，点上方停止再按一次<code>Ctrl + F5</code>就行了</p>
